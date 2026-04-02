@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link fw-bold hover-effect" href="../index.html#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold hover-effect" href="../index.html#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold hover-effect" href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .hover-effect {
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .hover-effect:hover {
+            color: #667eea !important;
+            border-bottom: 2px solid #667eea;
+        }
+    </style>
+
+    <section class="py-5" style="background-color: #ffffff;">
+        <div class="container text-center">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold" style="color: #667eea;">Arcane AI</h1>
+                    <p class="lead"><em>Mars 2026</em></p>
+                    
+                    <div class="mb-3">
+                        <span class="badge me-1" style="background-color: #3776ab;">Python</span>
+                        <span class="badge me-1" style="background-color: #0078d4;">Discord API</span>
+                        <span class="badge" style="background-color: #FFD700; color: #000;">Hugging Face</span>
+                    </div>
+
+                    <p class="lead text-wrap">
+                        <strong>Un chatbot Discord avec architecture IA personnalisée et streaming en temps réel.</strong><br>
+                        En 2 semaines, j'ai développé un système conversationnel complet fonctionnant sur Discord. 
+                        L'architecture innovante permet une interaction fluide à travers le texte et la voix, 
+                        avec un temps de réponse optimisé à environ 2 secondes maximum. Chaque couche de la pipeline 
+                        tourne en threading pour garantir un traitement efficace et fluide.
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../images/arcane_logo.jpg" class="img-fluid" style="max-height: 280px; object-fit: contain; border-radius: 50%;" alt="Arcane AI Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f0eefc;">
+        <div class="container text-center">
+            <h3 class="fw-bold mb-5" style="color: #764ba2;">Architecture Pipeline</h3>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12">
+                    <img src="../images/pipeline.png" class="img-fluid" alt="AI Pipeline Architecture" style="max-width: 80%; height: auto; margin: 0 auto; border-radius: 12px;">
+                </div>
+            </div>
+            <p class="lead text-wrap mt-4">
+                La pipeline d'Arcane AI utilise une architecture multi-couches avec streaming en direct. 
+                Chaque "Layer" tourne en threading et communique via des queues pour un traitement efficace et parallelisé.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f9f8fd;">
+        <div class="container text-center">
+            <h3 class="fw-bold mb-4" style="color: #667eea;">Modèles Hugging Face Utilisés</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>STT</strong></h6>
+                            <p class="card-text">
+                                <a href="https://huggingface.co/openai/whisper-large-v3-turbo" target="_blank" class="text-decoration-none fw-bold">Whisper Large V3 Turbo</a>
+                            </p>
+                            <p class="small text-muted">Transcription vocale haute précision en temps réel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>LLM</strong></h6>
+                            <p class="card-text">
+                                <a href="https://huggingface.co/Qwen/Qwen3.5-2B" target="_blank" class="text-decoration-none fw-bold">Qwen 2.5-2B</a>
+                            </p>
+                            <p class="small text-muted">Modèle langage compact et performant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>TTS</strong></h6>
+                            <p class="card-text">
+                                <a href="https://huggingface.co/hexgrad/Kokoro-82M" target="_blank" class="text-decoration-none fw-bold">Kokoro-82M</a>
+                            </p>
+                            <p class="small text-muted">Synthèse vocale naturelle et rapide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #ffffff;">
+        <div class="container text-center">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <h3 class="fw-bold" style="color: #764ba2;">Expérience Utilisateur & Performances</h3>
+                    <p class="lead text-wrap">
+                        Le système fonctionne sur <strong>deux canaux Discord</strong> :
+                    </p>
+                    <ul class="lead text-wrap text-start">
+                        <li><strong>Channel texte :</strong> Écrivez et recevez des réponses instantanées</li>
+                        <li><strong>Channel vocal :</strong> Parlez et écoutez le chatbot répondre</li>
+                        <li><strong>Temps de réponse :</strong> ~2 secondes maximum</li>
+                    </ul>
+                    <p class="lead text-wrap">
+                        L'architecture de threading garantit que chaque étape (transcription, génération, synthèse) 
+                        fonctionne en parallèle, éliminant les goulots d'étranglement.
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Ce que j'ai appris</h5>
+                            <p class="card-text text-start mb-2">
+                                ✓ Architecture et pipelines d'IA avancées
+                            </p>
+                            <p class="card-text text-start mb-2">
+                                ✓ Intégration Discord API pour interactions en temps réel
+                            </p>
+                            <p class="card-text text-start mb-2">
+                                ✓ Threading et gestion de queues pour parallelisation
+                            </p>
+                            <p class="card-text text-start mb-2">
+                                ✓ Optimization d'IA pour exécution locale
+                            </p>
+                            <p class="card-text text-start">
+                                ✓ Bien au-delà du simple "input → IA → output"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f9f8fd;">
+        <div class="container text-center">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Ce que j'ai appris</h5>
+                            <p class="card-text text-start mb-2">
+                                ✓ Architecture et pipelines d'IA avancées
+                            </p>
+                            <p class="card-text text-start mb-2">
+                                ✓ Intégration Discord API pour interactions en temps réel
+                            </p>
+                            <p class="card-text text-start mb-2">
+                                ✓ Threading et gestion de queues pour parallelisation
+                            </p>
+                            <p class="card-text text-start mb-2">
+                                ✓ Optimization d'IA pour exécution locale
+                            </p>
+                            <p class="card-text text-start">
+                                ✓ Bien au-delà du simple "input → IA → output"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f0eefc;">
+        <div class="container text-center">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <h3 class="fw-bold" style="color: #764ba2;">Une IA avec Personnalité</h3>
+                    <p class="lead text-wrap">
+                        Arcane AI n'est pas juste un chatbot standard. Elle a été conçue pour <strong>avoir une véritable personnalité</strong> 
+                        et converser <strong>comme entre amis</strong>. 
+                    </p>
+                    <p class="lead text-wrap">
+                        Au lieu de réponses formelles et robotiques, Arcane comprend le contexte, utilise l'humour, 
+                        pose des questions naturelles et crée une véritable interaction conversationnelle. 
+                        C'est une IA qui écoute vraiment et qui répond de manière authentique.
+                    </p>
+                    <p class="lead text-wrap small text-muted mt-3">
+                        <strong>Technique utilisée :</strong> Fine-tuning du modèle LLM pour adapter ses réponses et créer une personnalité cohérente et engageante.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Caractéristiques Conversationnelles</h5>
+                            <p class="card-text text-start small mb-2">
+                                ✓ Personnalité naturelle et authentique
+                            </p>
+                            <p class="card-text text-start small mb-2">
+                                ✓ Comprend le contexte et les nuances
+                            </p>
+                            <p class="card-text text-start small mb-2">
+                                ✓ Utilise l'humour de manière appropriée
+                            </p>
+                            <p class="card-text text-start small mb-2">
+                                ✓ Crée une véritable relation avec l'utilisateur
+                            </p>
+                            <p class="card-text text-start small mb-2">
+                                ✓ Répond de manière pertinente et engageante
+                            </p>
+                            <p class="card-text text-start small mb-2">
+                                ✓ Mémoire à court terme pour garder le contexte
+                            </p>
+                            <hr>
+                            <p class="card-text text-start small mb-0">
+                                <strong>Fine-tuning :</strong> Ajustement personnalisé des paramètres du modèle d'IA pour adapter son comportement et sa façon de communiquer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #ffffff;">
+        <div class="container text-center">
+            <h3 class="fw-bold mb-5" style="color: #667eea;">Démos en Action</h3>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Démo Texte</h5>
+                            <p class="card-text mb-3">Interaction en texte sur le channel Discord - Réponses instantanées et naturelles</p>
+                            <video width="100%" height="auto" controls style="border-radius: 12px;">
+                                <source src="../images/text_demo.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas les vidéos HTML5.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Démo Vocale</h5>
+                            <p class="card-text mb-3">Conversation vocale en direct - Parlez et écoutez Arcane répondre (~2s)</p>
+                            <video width="100%" height="auto" controls style="border-radius: 12px;">
+                                <source src="../images/voice_demo.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas les vidéos HTML5.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3" style="font-size: 2rem;">Intéressé par ce projet ?</h2>
+            <p class="lead mb-4" style="max-width: 600px; margin: 0 auto;">
+                Vous avez des questions ou souhaitez discuter de ce projet ?
+            </p>
+            <a href="mailto:ken.dinh@orange.fr" class="btn btn-light btn-lg fw-bold">
+                <i class="bi bi-envelope me-2"></i>Envoyer un email
+            </a>
+            <p class="mt-4 mb-0">
+                <i class="bi bi-envelope me-2"></i><a href="mailto:ken.dinh@orange.fr" class="text-white text-decoration-none">ken.dinh@orange.fr</a>
+                <span class="mx-3">|</span>
+                <i class="bi bi-telephone me-2"></i><a href="tel:+33786584929" class="text-white text-decoration-none">07.86.58.49.29</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2026 Ken Dinh. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

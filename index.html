@@ -13,182 +13,399 @@
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
-			<a class="navbar-brand" href="#">Portfolio</a>
+			<a class="navbar-brand fw-bold" href="#">Portfolio</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div id="navbarNav" class="collapse navbar-collapse justify-content-end">
-				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-					<li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+				<ul class="navbar-nav gap-3">
+					<li class="nav-item"><a class="nav-link fw-bold hover-effect" href="#about">À propos</a></li>
+					<li class="nav-item"><a class="nav-link fw-bold hover-effect" href="#projects">Projets</a></li>
+					<li class="nav-item"><a class="nav-link fw-bold hover-effect" href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<header class="bg-light text-dark text-center py-5">
+	<style>
+		.hover-effect {
+			transition: all 0.3s ease;
+			border-bottom: 2px solid transparent;
+		}
+		.hover-effect:hover {
+			color: #667eea !important;
+			border-bottom: 2px solid #667eea;
+		}
+	</style>
+
+	<header class="text-white text-center py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 500px; display: flex; flex-direction: column; justify-content: center;">
 		<div class="container">
-			<h1 class="display-4 fw-bold">Ken Dinh</h1>
-			<p class="lead">Étudiant en MMI (Métiers du Multimédia et de l'Internet)</p>
-			<a href="#projects" class="btn btn-primary btn-lg mt-3">Voir mes projets</a>
-			<a href="html/cv.html" class="btn btn-primary btn-lg mt-3">Voir mon CV</a>
+			<div style="margin-bottom: 40px;">
+				<p class="text-white-50 mb-2" style="font-size: 1.1rem; letter-spacing: 2px;">Bienvenue</p>
+				<h1 class="display-3 fw-bold mb-3">Ken Dinh</h1>
+				<p class="lead mb-2">Étudiant en MMI</p>
+				<p class="text-white-50" style="font-size: 1.05rem; max-width: 600px; margin: 0 auto;">
+					Passionné par le développement logiciel et l'IA. Spécialisé en Python, architectures cloud et machine learning.
+				</p>
+			</div>
+			<div class="d-flex gap-3 justify-content-center flex-wrap mt-5">
+				<a href="#projects" class="btn btn-light btn-lg fw-bold">Découvrir mes projets</a>
+				<a href="html/cv.html" class="btn btn-outline-light btn-lg fw-bold">Voir mon CV</a>
+			</div>
 		</div>
 	</header>
 
-	<section id="about" class="py-5">
-		<div class="container text-center">
-			<h2 class="fw-bold mb-4">À propos</h2>
-			<p class="lead">Étudiant en MMI (Métiers du Multimédia et de l'Internet), je suis passionné par la
-				création des logiciels et de jeux vidéo. J'apprécie particulièrement travailler avec Python et explorer
-				les concepts de
-				programmation orientée objet.</p>
+	<section id="about" class="py-5" style="background-color: #f0eefc;">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8 offset-lg-2">
+					<h2 class="fw-bold mb-4" style="font-size: 2.5rem; color: #667eea;">À propos de moi</h2>
+					<p class="lead mb-3">
+						Je suis un étudiant en MMI (Métiers du Multimédia et de l'Internet) passionné par la création logicielle et l'intelligence artificielle.
+					</p>
+					<p class="mb-3">
+						Mon expertise principale porte sur <strong>Python</strong>, que j'utilise quotidiennement pour développer des solutions d'IA, des scripts d'automatisation et des jeux. J'aime particulièrement explorer les concepts de programmation orientée objet et les architectures logicielles complexes.
+					</p>
+					<p class="mb-3">
+						Grâce à mon expérience chez <strong>CareStream Dental</strong> et mes projets personnels, j'ai développé une solide compréhension des pipelines de machine learning, de l'architecture microservices et des pratiques DevOps.
+					</p>
+					<p>
+						J'adore apprendre de nouvelles technologies et mettre en application mes connaissances dans des projets concrets. Que ce soit en backend, en IA ou en DevOps, je suis toujours motivé par les défis techniques !
+					</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section id="projects" class="py-5 bg-light">
+	<section id="projects" class="py-5" style="background-color: #ffffff;">
 		<div class="container">
-			<h2 class="text-center fw-bold mb-5">Mes projets</h2>
+			<h2 class="text-center fw-bold mb-5" style="font-size: 2.5rem; color: #764ba2;">Mes projets</h2>
+			<style>
+				.card-link {
+					text-decoration: none;
+					color: inherit;
+					display: block;
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+				}
+				.card-link:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3) !important;
+				}
+				.card-link .card {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+				}
+				.card-header-image {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					overflow: hidden;
+					padding: 15px;
+					background-color: #768391;
+					width: 100%;
+				}
+				.card-img-top {
+					width: 100%;
+					height: auto;
+					object-fit: contain;
+					background-color: #768391;
+				}
+				.card-body {
+					padding: 15px;
+					flex-grow: 1;
+					display: flex;
+					flex-direction: column;
+				}
+				.card-body .card-title {
+					margin-bottom: 8px;
+				}
+				.card-body .card-text {
+					margin-bottom: 8px;
+					font-size: 0.95rem;
+				}
+			</style>
 			<div class="row g-4">
-				<div class="col-md-4">
-					<div class="card h-100 shadow-sm">
-						<a href="html/noitemspawnlimit.html">
+				<div class="col-md-6">
+					<a href="html/discord_chatbot.html" class="card-link">
+						<div class="card shadow-sm">
+							<div class="card-header-image">
+								<img src="images/arcane_logo.jpg" style="width: 150px; height: auto; object-fit: contain; border-radius: 50%;" alt="Arcane AI Logo">
+							</div>
+							<div class="card-body d-flex flex-column">
+								<h5 class="card-title">Arcane AI</h5>
+								<p class="card-text">Chatbot Discord avec architecture IA personnalisée et streaming en temps réel. Temps de réponse ~2s</p>
+								<div style="margin-bottom: 10px;">
+									<span class="badge me-1" style="background-color: #3776ab;">Python</span>
+									<span class="badge me-1" style="background-color: #0078d4;">Discord API</span>
+									<span class="badge" style="background-color: #FFD700; color: #000;">Hugging Face</span>
+								</div>
+								<span class="btn btn-primary btn-sm mt-auto fw-bold">Voir plus</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-6">
+					<a href="html/txlforma.html" class="card-link">
+						<div class="card shadow-sm">
+							<img src="images/txlforma_home.png" class="card-img-top" alt="TXLForma">
+							<div class="card-body d-flex flex-column">
+								<h5 class="card-title">TXLForma</h5>
+								<p class="card-text">Plateforme web complète de gestion de formations en numérique avec rôles Admin, Professeur et Étudiant</p>
+								<div style="margin-bottom: 10px;">
+									<span class="badge me-1" style="background-color: #007396;">Java</span>
+									<span class="badge me-1" style="background-color: #6cb33f;">Spring Boot</span>
+									<span class="badge me-1" style="background-color: #00758f;">MySQL</span>
+									<span class="badge" style="background-color: #2496ed;">Docker</span>
+								</div>
+								<span class="btn btn-primary btn-sm mt-auto fw-bold">Voir plus</span>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-6">
+					<a href="html/noitemspawnlimit.html" class="card-link">
+						<div class="card shadow-sm">
 							<img src="images/noitemspawnlimit.png" class="card-img-top" alt="Project 1">
-						</a>
-						<div class="card-body">
-							<h5 class="card-title">NoItemSpawnLimit</h5>
-							<p class="card-text">Un projet de mod pour REPO.</p>
-							<img alt="Thunderstore Downloads" src="https://img.shields.io/thunderstore/dt/HeroHanex/NoItemSpawnLimit?style=for-the-badge"><br><br>
-							<a href="html/noitemspawnlimit.html" class="btn btn-outline-primary btn-sm">Voir plus</a>
+							<div class="card-body d-flex flex-column">
+								<div class="d-flex justify-content-between align-items-start" style="margin-bottom: 8px;">
+									<h5 class="card-title mb-0">NoItemSpawnLimit</h5>
+									<img alt="Thunderstore Downloads" src="https://img.shields.io/thunderstore/dt/HeroHanex/NoItemSpawnLimit?style=for-the-badge">
+								</div>
+								<p class="card-text">Un projet de mod pour REPO.</p>
+								<div style="margin-bottom: 10px;">
+									<span class="badge me-1" style="background-color: #239120;">C#</span>
+									<span class="badge me-1" style="background-color: #000000;">Unity</span>
+									<span class="badge" style="background-color: #b8511a;">BepInEx</span>
+								</div>
+								<span class="btn btn-primary btn-sm mt-auto fw-bold">Voir plus</span>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
-				<div class="col-md-4">
-					<div class="card h-100 shadow-sm">
-						<a href="html/ice_em.html">
+				<div class="col-md-6">
+					<a href="html/ice_em.html" class="card-link">
+						<div class="card shadow-sm">
 							<img src="images/gem.png" class="card-img-top" alt="Project 2">
-						</a>
-						<div class="card-body">
-							<h5 class="card-title">Ice Gem</h5>
-							<p class="card-text">Un projet 3D avec des shaders</p>
-							<a href="html/ice_em.html" class="btn btn-outline-primary btn-sm">Voir plus</a>
+							<div class="card-body d-flex flex-column">
+								<h5 class="card-title">Ice Gem</h5>
+								<p class="card-text">Un projet 3D avec des shaders</p>
+								<div style="margin-bottom: 10px;">
+									<span class="badge me-1" style="background-color: #f37722;">Blender</span>
+									<span class="badge" style="background-color: #9966cc;">Shader</span>
+								</div>
+								<span class="btn btn-primary btn-sm mt-auto fw-bold">Voir plus</span>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
-				<div class="col-md-4">
-					<div class="card h-100 shadow-sm">
-						<a href="./html/pwm.html">
+				<div class="col-md-6">
+					<a href="./html/pwm.html" class="card-link">
+						<div class="card shadow-sm">
 							<img src="images/password_manager.png" class="card-img-top" alt="Project 3">
-						</a>
-						<div class="card-body">
-							<h5 class="card-title">Password Manager</h5>
-							<p class="card-text">Programme qui permet de gérer/stocker des mots de passe et de générer
-								des mots de passe</p>
-							<a href="./html/pwm.html" class="btn btn-outline-primary btn-sm">Voir plus</a>
+							<div class="card-body d-flex flex-column">
+								<h5 class="card-title">Password Manager</h5>
+								<p class="card-text">Programme qui permet de gérer/stocker des mots de passe et de générer
+									des mots de passe</p>
+								<div style="margin-bottom: 10px;">
+									<span class="badge me-1" style="background-color: #3776ab;">Python</span>
+									<span class="badge me-1" style="background-color: #4B8BBE;">Tkinter</span>
+									<span class="badge" style="background-color: #17a2b8;">Cryptography</span>
+								</div>
+								<span class="btn btn-primary btn-sm mt-auto fw-bold">Voir plus</span>
+							</div>
 						</div>
-					</div>
+					</a>
+				</div>
+						</div>
+					</a>
 				</div>
 
 			</div>
 		</div>
 	</section>
 
-	<section id="competences" class="py-5">
+	<section id="competences" class="py-5" style="background-color: #f9f8fd;">
 		<div class="container">
-			<h2 class="text-center fw-bold mb-5">Compétences</h2>
-			<p class="lead text-center">J'ai eu ces compétences grâce à mes études à l'IUT</p>
+			<h2 class="text-center fw-bold mb-2" style="font-size: 2.5rem; color: #667eea;">Compétences</h2>
+			<p class="lead text-center mb-5 text-muted">Langages et technologies que j'utilise au quotidien</p>
 
-			<div class="row g-4">
-
-				<div class="col-md-4">
-					<div class="card h-100 text-center shadow-sm">
+			<!-- Core Skills Languages -->
+			<div class="row g-3 mb-5">
+				<div class="col-12">
+					<h5 class="fw-bold mb-3 text-muted">Langages principaux</h5>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="card h-100 text-center shadow-sm border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
 						<div class="card-body">
-							<h5 class="card-title"><i class="bi bi-laptop"></i> Développement Front</h5>
-							<p>HTML, CSS, JavaScript, création d'interfaces interactives et responsives</p>
+							<h6 class="card-title fw-bold mb-2">Python</h6>
+							<p class="small">IA, Scripts, Jeux</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-4">
-					<div class="card h-100 text-center shadow-sm">
+				<div class="col-md-3 col-sm-6">
+					<div class="card h-100 text-center shadow-sm border-0" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
 						<div class="card-body">
-							<h5 class="card-title"><i class="bi bi-server"></i> Développement Back</h5>
-							<p>Python, PHP, Java, conception de scripts et applications performantes</p>
+							<h6 class="card-title fw-bold mb-2">Java</h6>
+							<p class="small">Backend, Spring Boot</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-4">
-					<div class="card h-100 text-center shadow-sm">
+				<div class="col-md-3 col-sm-6">
+					<div class="card h-100 text-center shadow-sm border-0" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
 						<div class="card-body">
-							<h5 class="card-title"><i class="bi bi-code-square"></i> Framework</h5>
-							<p>Angular et React pour la création d'applications web dynamiques et Spring Boot pour la gestion de bases de données</p>
+							<h6 class="card-title fw-bold mb-2">C#</h6>
+							<p class="small">Unity, Modding</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-4">
-					<div class="card h-100 text-center shadow-sm">
+				<div class="col-md-3 col-sm-6">
+					<div class="card h-100 text-center shadow-sm border-0" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white;">
 						<div class="card-body">
-							<h5 class="card-title"><i class="bi bi-database"></i> Base de données</h5>
-							<p>MySQL, conception et gestion de bases de données relationnelles</p>
+							<h6 class="card-title fw-bold mb-2">Web</h6>
+							<p class="small">HTML, CSS, JS</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-md-4">
-					<div class="card h-100 text-center shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title"><i class="bi bi-image"></i> Montage photo</h5>
-							<p>Photoshop, Illustrator, InDesign, retouche et création graphique</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="card h-100 text-center shadow-sm">
-						<div class="card-body">
-							<h5 class="card-title"><i class="bi bi-camera-video"></i> Montage vidéo</h5>
-							<p>Premiere Pro, After Effects, création et montage de vidéos professionnelles</p>
-						</div>
-					</div>
-				</div>
-
 			</div>
 
+			<!-- Technology Stack -->
+			<div class="row g-4 mb-5">
+				<div class="col-md-6">
+					<div class="card h-100 shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title fw-bold mb-3">
+								<i class="bi bi-server" style="color: #667eea;"></i> Frameworks & Outils
+							</h5>
+							<div class="d-flex flex-wrap gap-2">
+								<span class="badge bg-light text-dark border">Spring Boot</span>
+								<span class="badge bg-light text-dark border">React</span>
+								<span class="badge bg-light text-dark border">Angular</span>
+								<span class="badge bg-light text-dark border">Docker</span>
+								<span class="badge bg-light text-dark border">MySQL</span>
+								<span class="badge bg-light text-dark border">Discord API</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card h-100 shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title fw-bold mb-3">
+								<i class="bi bi-lightning" style="color: #764ba2;"></i> Spécialisations
+							</h5>
+							<div class="d-flex flex-wrap gap-2">
+								<span class="badge bg-light text-dark border">Machine Learning</span>
+								<span class="badge bg-light text-dark border">IA Locale</span>
+								<span class="badge bg-light text-dark border">Streaming Architecture</span>
+								<span class="badge bg-light text-dark border">Threading</span>
+								<span class="badge bg-light text-dark border">Backend API</span>
+								<span class="badge bg-light text-dark border">DevOps</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card h-100 shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title fw-bold mb-3">
+								<i class="bi bi-palette" style="color: #f5576c;"></i> Design & Multimédia
+							</h5>
+							<div class="d-flex flex-wrap gap-2">
+								<span class="badge bg-light text-dark border">Photoshop</span>
+								<span class="badge bg-light text-dark border">Illustrator</span>
+								<span class="badge bg-light text-dark border">Premiere Pro</span>
+								<span class="badge bg-light text-dark border">After Effects</span>
+								<span class="badge bg-light text-dark border">Blender</span>
+								<span class="badge bg-light text-dark border">Shaders</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card h-100 shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title fw-bold mb-3">
+								<i class="bi bi-gear" style="color: #00f2fe;"></i> Concepts Clés
+							</h5>
+							<div class="d-flex flex-wrap gap-2">
+								<span class="badge bg-light text-dark border">Architecture Logicielle</span>
+								<span class="badge bg-light text-dark border">REST API</span>
+								<span class="badge bg-light text-dark border">Base de Données</span>
+								<span class="badge bg-light text-dark border">Conteneurisation</span>
+								<span class="badge bg-light text-dark border">Responsive Design</span>
+								<span class="badge bg-light text-dark border">OOP</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Professional Experience -->
 			<div class="row mt-5">
 				<div class="col-12">
-					<h3 class="fw-bold mb-4 text-center"><i class="bi bi-briefcase"></i> Expérience professionnelle</h3>
+					<h3 class="fw-bold mb-4 text-center" style="font-size: 2rem;">
+						<i class="bi bi-briefcase" style="color: #667eea;"></i> Expérience Professionnelle
+					</h3>
+				</div>
+			</div>
 
-					<div class="card shadow-sm mb-3">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="card shadow-sm border-left" style="border-left: 5px solid #667eea;">
 						<div class="card-body">
-							<h5 class="card-title">CareStream Dental</h5>
-							<p class="mb-1"><strong>Type :</strong> 2 stages et 1 alternance</p>
-							<p class="mb-1"><strong>Missions :</strong> Développement d'un logiciel de diagnostic pour
-								les machines de radiologie en Python. Création et optimisation de scripts pour améliorer
-								la lisibilité et les performances.</p>
+							<div class="d-flex justify-content-between align-items-start mb-2">
+								<div>
+									<h5 class="card-title fw-bold mb-1">Software Developer / Développeur Logiciel</h5>
+									<p class="text-muted mb-0">
+										<strong>CareStream Dental</strong> | 2 Stages + 1 Alternance
+									</p>
+								</div>
+							</div>
+							<hr>
+							<p class="card-text mb-2">
+								<strong>Missions principales :</strong>
+							</p>
+							<ul class="mb-0">
+								<li>Développement d'un logiciel de diagnostic pour machines de radiologie</li>
+								<li>Création et optimisation de scripts Python pour améliorer lisibilité et performances</li>
+								<li>Support technique auprès des technicians sur le terrain</li>
+								<li>Mise à jour et maintenance du système de checkup</li>
+							</ul>
 						</div>
 					</div>
-
 				</div>
 			</div>
 
 		</div>
 	</section>
 
-	<section id="contact" class="py-5 bg-light">
+	<section id="contact" class="py-5 text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
 		<div class="container text-center">
-			<h2 class="fw-bold mb-4">Contact</h2>
-			<p class="lead mb-4">Intéressé(e) par une collaboration ou par l'étude de mes projets ?</p>
-			<a href="mailto:ken.dinh@orange.fr" class="btn btn-primary btn-lg">Envoyez-moi un e-mail</a>
-			<p class="mt-3">Email: ken.dinh@orange.fr | Tel: 07.86.58.49.29</p>
+			<h2 class="fw-bold mb-3" style="font-size: 2.5rem;">Parlons-en !</h2>
+			<p class="lead mb-4" style="max-width: 600px; margin: 0 auto;">
+				Vous avez une question ou souhaitez collaborer ? N'hésitez pas à me contacter.
+			</p>
+			<a href="mailto:ken.dinh@orange.fr" class="btn btn-light btn-lg fw-bold">
+				<i class="bi bi-envelope me-2"></i>Envoyer un email
+			</a>
+			<p class="mt-4 mb-0">
+				<i class="bi bi-envelope me-2"></i><a href="mailto:ken.dinh@orange.fr" class="text-white text-decoration-none">ken.dinh@orange.fr</a>
+				<span class="mx-3">|</span>
+				<i class="bi bi-telephone me-2"></i><a href="tel:+33786584929" class="text-white text-decoration-none">07.86.58.49.29</a>
+			</p>
 		</div>
 	</section>
 
 	<footer class="bg-dark text-white text-center py-3">
-		<p class="mb-0">&copy; 2025 Ken Dinh.</p>
+		<p class="mb-0">&copy; 2026 Ken Dinh. Tous droits réservés.</p>
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
